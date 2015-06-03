@@ -12,6 +12,7 @@ Internally the watcher runs the `Makefile` (classic way to compile a latex)
 
 Uses [git-latex-diff](https://gitlab.com/groups/git-latexdiff) to generate a pdf
 with additions and deletions since the last time this command was run. This
-command **must** be run after a commit is made.
+command **must** be run after a commit is made **and** after adding the initial
+commit to the file `last-commit.sha`.
 
 -
