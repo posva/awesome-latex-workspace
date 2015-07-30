@@ -3,9 +3,17 @@ Awesome latex workspace
 
 Easy to use watcher + diff latex.
 
-I couldn'find a great name for this other than *boilerplate* so I named it
+I couldn't find a great name for this other than *boilerplate* so I named it
 awesome because it really makes my life easier for reports. Feel free to
 open issues if you know about nifty features to improve this.
+
+Remember to install submodules first by either cloning using the `--recursive`
+or by doing
+
+```bash
+git submodule init
+git submodule update
+```
 
 ## Watcher
 

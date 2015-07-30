@@ -1,6 +1,6 @@
 #! /bin/bash
 
-source ./task-logger.sh
+source ./task-logger.sh/task-logger.sh
 
 F="report.tex"
 
