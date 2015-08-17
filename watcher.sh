@@ -8,7 +8,7 @@ wait_for_modification() {
   local now back_then
   back_then="$1"
   while true; do
-    now=$(stat -c "%Y" "$F")
+    now=$(perl -e 'my $mtime = (stat("'$F'"))[9]; print "$mtime";')
     if [ "$now" -gt "$back_then" ]; then
       echo "$now"
       return 0
@@ -30,7 +30,7 @@ WHEN=0
 while true; do
   working -n "Watching $F"
   log_cmd -o watch wait_for_modification "$WHEN" || ko
-  WHEN=$(stat -c "%Y" "$F")
+  WHEN=$(perl -e 'my $mtime = (stat("'$F'"))[9]; print "$mtime";')
   working -n "Generating PDF"
   log_cmd -o latex generate_pdf || error_pdf
 done
